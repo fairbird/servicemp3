@@ -3215,3 +3215,8 @@ void eServiceMP3::saveCuesheet()
 	}
 	m_cuesheet_changed = 0;
 }
+
+__attribute__((constructor)) void libraryinit(int argc, char **argv)
+{
+	gst_init(&argc, &argv);
+}

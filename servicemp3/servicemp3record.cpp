@@ -1,4 +1,4 @@
-#include <lib/service/servicemp3record.h>
+#include <servicemp3record.h>
 #include <lib/base/eerror.h>
 #include <lib/dvb/epgcache.h>
 #include <lib/dvb/metaparser.h>

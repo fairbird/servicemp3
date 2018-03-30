@@ -2,7 +2,7 @@
 #define __servicemp3record_h
 
 #include <lib/service/iservice.h>
-#include <lib/service/servicemp3.h>
+#include <servicemp3.h>
 #include <lib/dvb/idvb.h>
 #include <gst/gst.h>
 

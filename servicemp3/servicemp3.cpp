@@ -10,8 +10,8 @@
 #include <lib/dvb/decoder.h>
 #include <lib/components/file_eraser.h>
 #include <lib/gui/esubtitle.h>
-#include <lib/service/servicemp3.h>
-#include <lib/service/servicemp3record.h>
+#include <servicemp3.h>
+#include <servicemp3record.h>
 #include <lib/service/service.h>
 #include <lib/gdi/gpixmap.h>
 

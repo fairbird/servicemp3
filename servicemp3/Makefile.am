@@ -7,7 +7,8 @@ AM_CPPFLAGS = \
 
 AM_CXXFLAGS = \
 	-Wall \
-	@ENIGMA2_CFLAGS@
+	@ENIGMA2_CFLAGS@ \
+	@GSTREAMER_CFLAGS@
 
 plugindir = $(libdir)/enigma2/python/Plugins/SystemPlugins/ServiceMP3
 
@@ -19,6 +20,7 @@ servicemp3_la_SOURCES = \
 	pythonmodule.cpp
 
 servicemp3_la_LDFLAGS = \
+	@GSTREAMER_LIBS@ \
 	-avoid-version \
 	-module \
 	-shared

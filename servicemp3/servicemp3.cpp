@@ -2034,7 +2034,7 @@ void eServiceMP3::gstBusCall(GstMessage *msg)
 					break;
 				}
 				if (m_stream_tags)
-					gst_tag_list_free(m_stream_tags);
+					break;
 				m_stream_tags = result;
 			}
 

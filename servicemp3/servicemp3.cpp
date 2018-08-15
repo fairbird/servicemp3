@@ -1379,6 +1379,7 @@ int eServiceMP3::getInfo(int w)
 		return (int) v;
 		break;
 	}
+	case sSID: return m_ref.getData(1);
 	default:
 		return resNA;
 	}

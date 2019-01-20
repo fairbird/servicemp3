@@ -432,6 +432,7 @@ eServiceMP3::eServiceMP3(eServiceReference ref):
 	m_use_prefillbuffer = false;
 	m_paused = false;
 	m_seek_paused = false;
+	m_autoaudio = true;
 	m_cuesheet_loaded = false; /* cuesheet CVR */
 #if GST_VERSION_MAJOR >= 1
 	m_use_chapter_entries = false; /* TOC chapter support CVR */
@@ -1906,7 +1907,7 @@ void eServiceMP3::gstBusCall(GstMessage *msg)
 				case GST_STATE_CHANGE_PAUSED_TO_PLAYING:
 				{
 					m_paused = false;
-					if (m_currentAudioStream < 0)
+					if (m_autoaudio)
 					{
 						unsigned int autoaudio = 0;
 						int autoaudio_level = 5;
@@ -1943,6 +1944,7 @@ void eServiceMP3::gstBusCall(GstMessage *msg)
 
 						if (autoaudio)
 							selectTrack(autoaudio);
+						m_autoaudio = false;
 					}
 					m_event((iPlayableService*)this, evGstreamerPlayStarted);
 				}	break;

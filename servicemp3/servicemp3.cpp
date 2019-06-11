@@ -1398,17 +1398,14 @@ int eServiceMP3::getInfo(int w)
 
 std::string eServiceMP3::getInfoString(int w)
 {
-	if ( m_sourceinfo.is_streaming )
+	switch (w)
 	{
-		switch (w)
-		{
-		case sProvider:
-			return "IPTV";
-		case sServiceref:
-			return m_ref.toString();
-		default:
-			break;
-		}
+	case sProvider:
+		return m_sourceinfo.is_streaming ? "IPTV" : "FILE";
+	case sServiceref:
+		return m_ref.toString();
+	default:
+		break;
 	}
 
 	if ( !m_stream_tags && w < sUser && w > 26 )

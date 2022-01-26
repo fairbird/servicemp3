@@ -16,6 +16,8 @@ AC_ARG_WITH(gstversion,
 
 PKG_CHECK_MODULES(GSTREAMER, gstreamer-$GST_MAJORMINOR gstreamer-pbutils-$GST_MAJORMINOR)
 
+AX_CXX_COMPILE_STDCXX_17([ext],[mandatory])
+
 AC_DEFINE([DEBUG])
 
 AC_CONFIG_FILES([

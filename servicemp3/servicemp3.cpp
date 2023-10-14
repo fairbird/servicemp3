@@ -545,6 +545,9 @@ eServiceMP3::eServiceMP3(eServiceReference ref):
 		eDebug("[eServiceMP3] m_external_subtitle_path: %s m_external_subtitle_extension: %s m_external_subtitle_language: %s", m_external_subtitle_path.c_str(), m_external_subtitle_extension.c_str(), m_external_subtitle_language.c_str());
 	}
 
+	if(!m_ref.alternativeurl.empty())
+		filename = m_ref.alternativeurl.c_str();
+
 	const char *ext = strrchr(filename, '.');
 	if (!ext)
 		ext = filename + strlen(filename);

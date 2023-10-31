@@ -10,11 +10,7 @@ AX_PYTHON_DEVEL
 AC_LANG(C++)
 
 PKG_CHECK_MODULES(ENIGMA2, enigma2)
-AC_ARG_WITH(gstversion,
-	AS_HELP_STRING([--with-gstversion],[use gstreamer version (major.minor)]),
-	[GST_MAJORMINOR=$withval],[GST_MAJORMINOR=1.0])
-
-PKG_CHECK_MODULES(GSTREAMER, gstreamer-$GST_MAJORMINOR gstreamer-pbutils-$GST_MAJORMINOR)
+PKG_CHECK_MODULES(GSTREAMER, gstreamer-1.0 gstreamer-pbutils-1.0)
 
 AC_DEFINE([DEBUG])
 

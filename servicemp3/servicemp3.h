@@ -307,6 +307,7 @@ private:
 	bool m_use_prefillbuffer;
 	bool m_paused;
 	bool m_seek_paused;
+	bool m_autoturnon;
 	bool m_autoaudio;
 	/* cuesheet load check */
 	bool m_cuesheet_loaded;
